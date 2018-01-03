@@ -310,10 +310,11 @@
       </collision>
     </link>
 
+<!-- x point to down, y point to me, z point to door -->
     <joint name="${prefix}grasping_fixed_joint" type="fixed">
       <parent link="${prefix}ee_link" />
       <child link = "${prefix}grasping_frame" />
-      <origin xyz="0.25 -0.0353553391 -0.0353553391" rpy="${pi/4.0} 0.0 0.0" />
+      <origin xyz="0.25 0.0 0.0" rpy="${pi/4.0} 0.0 0.0" />
     </joint>
 
     <link name="${prefix}grasping_frame">
