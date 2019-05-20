@@ -326,6 +326,21 @@
       </collision>
     </link>
 
+    <joint name="${prefix}sensor_joint" type="fixed">
+      <parent link="${prefix}tool0" />
+      <child link = "${prefix}sensor_link" />
+      <origin xyz="0.0 0.0 0.035" rpy="0.0 0.0 0.0" />
+    </joint>
+
+    <link name="${prefix}sensor_link">
+      <collision>
+        <geometry>
+          <box size="0.01 0.01 0.01"/>
+        </geometry>
+        <origin rpy="0 0 0" xyz="0.0 0 0"/>
+      </collision>
+    </link>
+
     <xacro:ur_arm_transmission prefix="${prefix}" />
     <xacro:ur_arm_gazebo prefix="${prefix}" />
 
